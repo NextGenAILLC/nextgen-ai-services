@@ -31,6 +31,11 @@
   .contact h2 { color: #fff; }
   .contact p { opacity: .85; margin-bottom: 20px; font-size: 16px; }
   .contact a.tel { display: inline-block; font-size: 26px; font-weight: 700; color: #5eead4; text-decoration: none; }
+  .contact a.mail { display: block; margin-top: 10px; font-size: 18px; color: #5eead4; text-decoration: none; }
+  .contact form { max-width: 520px; margin: 26px auto 0; text-align: left; }
+  .contact label { display: block; font-size: 14px; margin: 12px 0 6px; opacity: .9; }
+  .contact input, .contact textarea { width: 100%; box-sizing: border-box; padding: 12px; border-radius: 8px; border: 1px solid #334155; background: #1e293b; color: #fff; font-size: 16px; }
+  .contact button { margin-top: 16px; width: 100%; padding: 14px; border: 0; border-radius: 8px; background: #0f766e; color: #fff; font-size: 17px; font-weight: 700; cursor: pointer; }
   .foot { text-align: center; padding: 24px; font-size: 13px; color: #64748b; }
 </style>
 </head>
@@ -69,6 +74,17 @@
   <h2>Talk to a human</h2>
   <p>Prefer a real voice? Call or text — the owner answers personally.</p>
   <a class="tel" href="tel:+19202154126">(920) 215-4126</a>
+  <a class="mail" href="mailto:hello@nextgenerationai360.com">hello@nextgenerationai360.com</a>
+  <form action="https://formspree.io/f/xppqygbw" method="POST">
+    <input type="hidden" name="_subject" value="New lead — NextGen AI Services page">
+    <label for="lead-name">Your name</label>
+    <input id="lead-name" type="text" name="name" required autocomplete="name">
+    <label for="lead-contact">Phone or email</label>
+    <input id="lead-contact" type="text" name="contact" required autocomplete="tel">
+    <label for="lead-msg">What do you need?</label>
+    <textarea id="lead-msg" name="message" rows="4"></textarea>
+    <button type="submit">Send — the owner replies personally</button>
+  </form>
 </div>
 
 <div class="foot">NextGen AI Services · AI services for small business</div>
@@ -158,7 +174,7 @@
     if (/service|offer|do you do/.test(t))
       return "AI chat assistants, done-for-you websites, domain management, business email, social handle setup, and virtual business addresses. Which sounds most useful?";
     if (/human|call|phone|contact/.test(t))
-      return "You can call or text the owner directly at (920) 215-4126 — or leave your number here and he'll call you back personally.";
+      return "You can call or text the owner directly at (920) 215-4126 — or use the contact form on this page and he'll get back to you personally.";
     return "Great question — we help small businesses use AI for the stuff that eats their day: answering questions, capturing leads, never missing a customer. What kind of business are you in?";
   }
 
